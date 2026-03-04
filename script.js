@@ -1,7 +1,7 @@
 // Lógica para reproducir el audio del botón "botonMusica"
 document.addEventListener('DOMContentLoaded', () => {    
     // Cargamos el archivo de audio
-    const cancion = new Audio('formulario/1318.mp3');
+    const cancion = new Audio('1318.mp3');
 
     // Seleccionamos el botón
     const boton = document.getElementById('botonMusica');
