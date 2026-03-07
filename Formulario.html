@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div id="cronometro">
+  Tiempo restante: <span id="tiempo-display">07:00</span>
+</div>
     <div class="container">
         <h1>Examen Música Urbana</h1>
         <form id="quizForm">
@@ -124,11 +127,13 @@
                 <input type="text" id="q16">
             </div>
 
+
             <div class="pregunta">
-                <p>17. ¿Cual es el titulo de este Album?</p> 
-                <label><input type="radio" name="q17" value="DATA"> DATA</label>
-                <label><input type="radio" name="q17" value="Private Suite"> Bestia</label>
-                <label><input type="radio" name="q17" value="Private Suite (Vol. 2)"> Private Suite (Vol. 2)</label>
+                <div id="contenedor-video"></div>
+                <p>17. ¿Como se llama la cancion de este videoclip?</p>
+                <label><input type="radio" name="q17" value="piensan"> Piensan</label>
+                <label><input type="radio" name="q17" value="newera"> New Era</label>
+                <label><input type="radio" name="q17" value="goteo"> Goteo</label>
             </div>
 
             <button type="button" onclick="evaluarQuiz()">Enviar Respuestas</button>

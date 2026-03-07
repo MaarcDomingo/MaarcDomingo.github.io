@@ -1,29 +1,62 @@
-// Lógica para reproducir el audio del botón "botonMusica"
+document.addEventListener('DOMContentLoaded', () => {
+  let tiempoEnSegundos = 420; 
+  const displayElement = document.getElementById('tiempo-display');
+  const temporizador = setInterval(() => {
+    
+    tiempoEnSegundos--;
+    let minutos = Math.floor(tiempoEnSegundos / 60);
+    let segundos = tiempoEnSegundos % 60;
+
+    
+    minutos = minutos < 10 ? "0" + minutos : minutos;
+    segundos = segundos < 10 ? "0" + segundos : segundos;
+
+    displayElement.textContent = `${minutos}:${segundos}`;
+    
+    if (tiempoEnSegundos <= 0) {
+      clearInterval(temporizador); 
+      
+      alert("¡Se acabó el tiempo! Enviando respuestas automáticamente..."); 
+      
+      evaluarQuiz(); 
+    }
+  }, 1000);
+
+  
+});
+
 document.addEventListener('DOMContentLoaded', () => {    
-    // Cargamos el archivo de audio
     const cancion = new Audio('./1318.mp3');
-
-    // Seleccionamos el botón
     const boton = document.getElementById('botonMusica');
-
-    // Añadimos el evento de clic
     if (boton) {
         boton.addEventListener('click', () => {
             if (cancion.paused) {
                 cancion.play();
-                boton.textContent = "Pausar Canción ⏸️";
+                boton.textContent = "Pausar Canción";
                 boton.style.backgroundColor = "#ff4444"; 
             } else {
                 cancion.pause();
-                boton.textContent = "Reproducir Canción 🎵";
+                boton.textContent = "Reproducir Canción";
                 boton.style.backgroundColor = "#1DB954"; 
             }
         });
     }
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const contenedor = document.getElementById('contenedor-video');
+    const miVideo = document.createElement('video');
+    miVideo.controls = true;
+    miVideo.width = 600;
+    miVideo.src = './newera.mp4';
+    contenedor.appendChild(miVideo);
+});
+
+
+
+
 function evaluarQuiz() {
-    const totalQuestions = 16;
+    const totalQuestions = 17;
     let score = 0; 
 
     const q1 = document.querySelector('input[name="q1"]:checked')?.value;
@@ -70,11 +103,15 @@ function evaluarQuiz() {
     const q14 = document.querySelector('input[name="q14"]:checked')?.value;
     if (q14 === "2020") score++;
 
-    const q15 = document.querySelector('input[name="q14"]:checked')?.value;
+    const q15 = document.querySelector('input[name="q15"]:checked')?.value;
     if (q15 === "DATA") score++;
 
     const q16 = document.getElementById("q16").value.toLowerCase().trim();
     if (q16 === "13/18") score++; 
+
+    const q17 = document.querySelector('input[name="q17"]:checked')?.value;
+    if (q17 === "newera") score++;
+    
 
     let notaFinal = (score / totalQuestions) * 10;
     notaFinal = parseFloat(notaFinal.toFixed(1)); // Parsefloat quita el .0 si sobra
@@ -88,4 +125,7 @@ function evaluarQuiz() {
     } else {
         resultDiv.style.color = "red";  
     }
+
 }
+
+
