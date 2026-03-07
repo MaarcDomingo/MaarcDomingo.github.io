@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {    
     const cancion = new Audio('./1318.mp3');
-    cancion.volume = 0.0;
+    cancion.volume = 0.5;
     const boton = document.getElementById('botonMusica');
     if (boton) {
         boton.addEventListener('click', () => {
