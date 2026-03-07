@@ -1,18 +1,22 @@
+let temporizador;
+
 document.addEventListener('DOMContentLoaded', () => {
-  let tiempoEnSegundos = 420; 
-  const displayElement = document.getElementById('tiempo-display');
-  const temporizador = setInterval(() => {
+  let tiempoEnSegundos = 420; // esto es el tiempo del conometro 
+  const displayElement = document.getElementById('tiempo-display'); // busca donde mostrara el conometro, que este caso es el id que gemos creado en el span
+  temporizador = setInterval(() => { // ejecuta cada segundo 
     
     tiempoEnSegundos--;
-    let minutos = Math.floor(tiempoEnSegundos / 60);
+    let minutos = Math.floor(tiempoEnSegundos / 60); // calculamos el tiempo restante que queda
     let segundos = tiempoEnSegundos % 60;
 
-    
+    // añade el 0 a la izquierda para que salga 4:01 en vez de 4:1, si es menor a 10
     minutos = minutos < 10 ? "0" + minutos : minutos;
     segundos = segundos < 10 ? "0" + segundos : segundos;
 
+    // actualiza el texto en pantalla
     displayElement.textContent = `${minutos}:${segundos}`;
     
+    // cuando el contandor llega a 0, manda una aleta de que se ha acabado el tiempo y depues llama a evaluarquiz, que manda la respuesta directamente 
     if (tiempoEnSegundos <= 0) {
       clearInterval(temporizador); 
       
@@ -20,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       evaluarQuiz(); 
     }
-  }, 1000);
+  }, 1000); // hace que se repita todo el bloque cada segundo 
 
   
 });
@@ -125,6 +129,11 @@ function evaluarQuiz() {
     } else {
         resultDiv.style.color = "red";  
     }
+
+    document.getElementById('cajaexamen').style.display = 'none';
+    document.getElementById('cronometro').style.display = 'none';
+
+    clearInterval(temporizador);
 
 }
 
