@@ -1,0 +1,100 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+/* Encabezado */
+header {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #bdc3c7;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Cuadrícula de proyectos */
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Tarjeta de cada proyecto */
+.proyecto-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.proyecto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* Imagen del proyecto (marcador de posición) */
+.proyecto-img {
+    width: 100%;
+    height: 200px;
+    background-color: #ddd;
+    object-fit: cover;
+    display: block;
+}
+
+/* Contenido de la tarjeta */
+.proyecto-info {
+    padding: 1.5rem;
+}
+.proyecto-info h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+.proyecto-info p {
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+/* Botón de enlace */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.btn:hover {
+    background-color: #2980b9;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #2c3e50;
+    color: white;
+    margin-top: 2rem;
+}
