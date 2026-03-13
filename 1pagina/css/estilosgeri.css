@@ -1,0 +1,246 @@
+/* --- Reset de márgenes y paddings --- */
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/*! --- Menu superior --- */
+
+header{
+    background-color: black;
+    color: darkgoldenrod;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+/* --- Contenedor del Logo y Título --- */
+.logo-taller{
+    display: flex;
+    align-items: center;
+} 
+.logo-taller img{
+    width: 100px; 
+    height: auto;
+}
+.logo-taller h1{
+    font-size: 25px;
+    margin-left: 50px;
+}
+/* --- Navegación (Menú a la derecha) --- */
+nav ul {
+    display: flex;
+    list-style: none; /* Quita los puntos de la lista */
+    gap: 40px;        /* Espacio entre "Coches" y "Conócenos" */
+}
+
+/* --- Navegación (Menú a la derecha) --- */
+nav ul li a {
+    color: darkgoldenrod;
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    font-weight: bold;
+    font-size: 25px;
+}
+
+/*! --- Fin del menú superior --- */
+
+/*! --- INICIO --- */
+
+/* --- Estilos para la sección de introducción --- */
+.Introduccion {
+    color: darkgoldenrod;
+    text-align: center;
+}
+.Introduccion h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: gold;
+}
+/* --- Fondo de la sección de introducción --- */
+.fondo {
+    background-image: url('/imagenes/fotos\ portada\ y\ menu/fondo-web.png');
+    background-size: cover;       /* La imagen cubre todo el contenedor */
+    background-position: center;  /* Centra la imagen */
+    padding: 50px 0;              /* Espacio arriba y abajo */
+}
+/* --- Contenedor de los Cuadros (La Fila) --- */
+.contenedor-tarjetas {
+    display: flex;              
+    justify-content: center;    
+    gap: 50px;                  /* Espacio entre cada cuadrado */
+    flex-wrap: wrap;            /* Si la pantalla es muy pequeña, bajan a la siguiente linea */
+}
+/* --- Estilo de cada Cuadradito --- */
+.tarjetas {
+    background-color: white;
+    width: 200px;               /* Ancho fijo para que sean cuadrados */
+    margin-top: 50px; 
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    border: black 2px solid;
+    padding: 25px;
+}
+
+/* --- Estilo del Título --- */
+.tarjeta h3 {
+    margin-top: 0;
+    font-size: 17px;
+    font-weight: bold;
+    color: black;
+}
+
+/* --- Localizacion --- */
+.localizacion {
+    margin: 50px;
+    text-align: center;
+}
+.localizacion h2 {
+    font-size: 40px;
+    color: darkgoldenrod;
+    margin-bottom: 20px;
+}
+.localizacion p {
+    font-size: 18px;
+    color: darkgoldenrod;
+    margin-bottom: 30px;
+}
+/* --- Mapa incrustado --- */
+.localizacion img {
+    height: 500px;
+    border: 2px solid black;
+}
+
+/*! --- FIN INICIO --- */
+
+/*! --- Inicio Conocenos --- */
+.conocenos {
+    text-align: center;
+    color: darkgoldenrod;
+    
+}
+.fondo-web {
+    background-image: url('/imagenes/fotos portada y menu/fondo-web.png');
+    background-size: cover;       /* La imagen cubre todo el contenedor */
+    background-position: center;  /* Centra la imagen */
+    padding: 50px 0;              /* Espacio arriba y abajo */
+}
+.conocenos h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: gold;
+}
+.tarjeta-historia {
+    background-color: white;
+    border: 2px solid black;
+    padding: 20px;
+    margin: auto;
+    max-width: 800px; /* Ancho máximo para que no sea muy grande en pantallas grandes */
+    text-align: center; /* Alinea el texto a la izquierda */
+    font-size: 18px;
+}
+/* --- Contenedor Principal --- */
+.colaboradores-container {
+    padding: 50px 20px;        /* 50px arriba/abajo, 20px lados */
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Título Principal (H2) */
+.colaboradores-container h2 {
+    color: #D4AF37;            
+    font-size: 36px;           
+    margin-bottom: 40px;      
+    padding-bottom: 10px;
+}
+
+/* --- Contenedor de las Cajas --- */
+.contenido-colaboradores {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;                 /* Espacio de 30px entre tarjetas */
+}
+
+/* --- Diseño de la Tarjeta (Caja) --- */
+.tarjeta {
+    border: 2px solid #D4AF37;
+    width: 300px;              
+    padding: 25px;
+}
+
+/* Título del Personaje (H3) */
+.tarjeta h3 {
+    color: #D4AF37;            
+    font-size: 24px;           
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+/* Imágenes */
+.tarjeta img {
+    width: 100%;               /* Ocupa el ancho de la caja (300px menos padding) */
+    height: 200px;             /* Alto fijo en px */
+    object-fit: cover;         /* Ajuste de imagen */
+    border: 2px solid #D4AF37; 
+    margin-bottom: 15px;
+}
+
+/* Texto Descriptivo (P) */
+.tarjeta p {
+    color: darkgoldenrod;            
+    font-size: 16px;          
+    line-height: 24px;         
+}
+/*! --- Fin Conocenos --- */
+
+/*! --- INICIO COCHES --- */
+
+/* --- Contenedor General --- */
+/* Esto centra todo el contenido en la página y le da un ancho máximo */
+.contenedor-principal {
+    max-width: 1200px; /* Ancho máximo para que no se estire demasiado */
+    margin: 0 auto;    /* Esto centra el contenedor horizontalmente */
+    padding: 20px;
+    text-align: center; /* Centra textos e imágenes */
+}
+
+/* --- Parte Superior: Coche Destacado --- */
+.coche-destacado {
+    margin-bottom: 40px; /* Espacio para separar del bloque de abajo */
+}
+
+.coche-destacado img {
+    width: 80%;       /* Ocupa el 80% del ancho, para que destaque */
+    height: auto;     /* Mantiene la proporción de la foto */
+    border-radius: 10px; /* Un pequeño borde redondeado queda moderno */ 
+}
+
+/* --- Parte Inferior: La Galería (Grid) --- */
+.galeria-coches {
+    display: grid; 
+    /* AQUÍ ESTÁ LA MAGIA: "repeat(3, 1fr)" significa: 
+       "Repite 3 columnas del mismo tamaño" */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; /* Espacio entre las fotos */
+}
+
+/* Estilo de cada tarjetita de coche de abajo */
+.tarjeta-coche img {
+    width: 100%;      /* Que la foto ocupe todo su hueco disponible */
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid #ddd; /* Un borde fino gris */
+}
+
+/*! --- FOOTER --- */
+
+footer {
+    background-color: black;
+    color: darkgoldenrod;
+    padding: 20px;
+    text-align: center;
+}
+
+/*! --- FIN FOOTER --- */
