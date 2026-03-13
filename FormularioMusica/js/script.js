@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {    
-    const cancion = new Audio('./1318.mp3');
+    const cancion = new Audio('../mp3/1318.mp3');
     cancion.volume = 0.5;
     const boton = document.getElementById('botonMusica');
     if (boton) {
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const miVideo = document.createElement('video');
     miVideo.controls = true;
     miVideo.width = 600;
-    miVideo.src = './newera.mp4';
+    miVideo.src = '../mp3/newera.mp4';
     contenedor.appendChild(miVideo);
 });
 
